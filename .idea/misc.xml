@@ -6,9 +6,10 @@
         <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_chatbot.xml" value="0.1" />
         <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_send.xml" value="0.1" />
         <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_user.xml" value="0.1" />
-        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/bot_msg_rv_item.xml" value="0.14447463768115942" />
-        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/user_msg_rv_item.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/bot_msg_rv_item.xml" value="0.5" />
+        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/app/src/main/res/layout/user_msg_rv_item.xml" value="0.33" />
+        <entry key="..\:/Users/TOSHIPA/AndroidStudioProjects/MyApplication/myapplication2/src/main/res/layout/activity_r.xml" value="0.1" />
       </map>
     </option>
   </component>
