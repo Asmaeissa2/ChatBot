@@ -52,6 +52,18 @@ public class ChatRVAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return chatsModalArrayList.size();
     }
+    @Override
+    public int getItemViewType(int position) {
+        // below line of code is to set position.
+        switch (chatsModalArrayList.get(position).getSender()) {
+            case "user":
+                return 0;
+            case "bot":
+                return 1;
+            default:
+                return -1;
+        }
+    }
 
     public static class UserViewHolder extends RecyclerView.ViewHolder{
         TextView userTV;

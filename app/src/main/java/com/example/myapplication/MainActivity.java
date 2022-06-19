@@ -66,23 +66,32 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
         Call<MsgModal> call = retrofitAPI.getMessage(url);
-        call.enqueue(new Callback<MsgModal>() {
-            @Override
-            public void onResponse(Call<MsgModal> call, Response<MsgModal> response) {
-                if (response.isSuccessful()){
-                    MsgModal modal = response.body();
-                    chatsModalArrayList.add(new ChatsModal(modal.getCnt(),BOT_KEY));
-                    chatRVAdapter.notifyDataSetChanged();
+        try {
+            call.enqueue(new Callback<MsgModal>() {
+                @Override
+                public void onResponse(Call<MsgModal> call, Response<MsgModal> response) {
+                    if (response.isSuccessful()) {
+                        MsgModal modal = response.body();
+                        chatsModalArrayList.add(new ChatsModal(modal.getCnt(), BOT_KEY));
+                        chatRVAdapter.notifyDataSetChanged();
+                    } else {
+                        chatsModalArrayList.add(new ChatsModal("Issue in API connection", BOT_KEY));
+
+                    }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<MsgModal> call, Throwable t) {
-                chatsModalArrayList.add(new ChatsModal("Please revert your question",BOT_KEY));
-                chatRVAdapter.notifyDataSetChanged();
+                @Override
+                public void onFailure(Call<MsgModal> call, Throwable t) {
+                    chatsModalArrayList.add(new ChatsModal("Please revert your question", BOT_KEY));
+                    chatRVAdapter.notifyDataSetChanged();
 
-            }
-        });
+                }
+            });
+        }
+        catch (Exception e) {
+            System.out.println(e);
+
+        }
 
 
     }

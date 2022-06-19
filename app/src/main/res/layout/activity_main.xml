@@ -9,11 +9,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVChats"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/idRVChats"
-        android:layout_above="@id/idRLMsg"
-        />
+        android:layout_above="@id/idRLMsg" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,24 +26,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
             android:layout_toLeftOf="@id/idFABSend"
             android:hint="Enter Message"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            />
+            android:textColorHint="@color/white" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFABSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
             android:src="@drawable/ic_send"
-            android:id="@+id/idFABSend"
-            android:layout_margin="4dp"
-            app:fabCustomSize="45dp"
             app:backgroundTint="@color/fab_color"
-            app:tint="@color/white"
-            android:layout_alignParentRight="true" />
+            app:fabCustomSize="45dp"
+            app:tint="@color/white" />
 
     </RelativeLayout>
 </RelativeLayout>
